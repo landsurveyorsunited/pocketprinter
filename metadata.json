@@ -1,0 +1,8 @@
+{
+  "name": "Pocket Directory",
+  "description": "Private, offline-first mobile directory builder for local business and personal contacts with 3D tactile design, live paginated preview, and print-ready PDF export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

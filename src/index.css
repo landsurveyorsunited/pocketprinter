@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* 3D Neumorphic Raised Surfaces */
+  .neu-raised {
+    background-color: #EEF2F6;
+    box-shadow: 6px 6px 16px rgba(166, 178, 195, 0.5), -6px -6px 16px rgba(255, 255, 255, 0.9);
+  }
+
+  .neu-raised-sm {
+    background-color: #EEF2F6;
+    box-shadow: 3px 3px 8px rgba(166, 178, 195, 0.45), -3px -3px 8px rgba(255, 255, 255, 0.85);
+  }
+
+  .neu-raised-lg {
+    background-color: #EEF2F6;
+    box-shadow: 10px 10px 24px rgba(166, 178, 195, 0.5), -10px -10px 24px rgba(255, 255, 255, 0.95);
+  }
+
+  /* 3D Neumorphic Inset / Pressed Surfaces */
+  .neu-inset {
+    background-color: #EBF0F5;
+    box-shadow: inset 3px 3px 7px rgba(166, 178, 195, 0.55), inset -3px -3px 7px rgba(255, 255, 255, 0.9);
+  }
+
+  .neu-inset-sm {
+    background-color: #EBF0F5;
+    box-shadow: inset 2px 2px 5px rgba(166, 178, 195, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.85);
+  }
+
+  /* 3D Interactive Tactile Buttons */
+  .neu-btn {
+    background-color: #EEF2F6;
+    box-shadow: 4px 4px 10px rgba(166, 178, 195, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.85);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .neu-btn:hover {
+    box-shadow: 5px 5px 14px rgba(166, 178, 195, 0.6), -5px -5px 14px rgba(255, 255, 255, 0.95);
+    transform: translateY(-1px);
+  }
+
+  .neu-btn:active, .neu-btn-active {
+    box-shadow: inset 3px 3px 6px rgba(166, 178, 195, 0.55), inset -3px -3px 6px rgba(255, 255, 255, 0.85);
+    transform: translateY(1px);
+  }
+
+  /* Accent Colored 3D Buttons */
+  .neu-btn-teal {
+    background: linear-gradient(135deg, #0994a3, #07707c);
+    box-shadow: 4px 4px 12px rgba(8, 127, 140, 0.35), -3px -3px 8px rgba(255, 255, 255, 0.7);
+    color: #ffffff;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .neu-btn-teal:hover {
+    box-shadow: 5px 5px 16px rgba(8, 127, 140, 0.45), -4px -4px 10px rgba(255, 255, 255, 0.85);
+    transform: translateY(-1px);
+  }
+
+  .neu-btn-teal:active {
+    background: linear-gradient(135deg, #07707c, #065b65);
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(1px);
+  }
+
+  /* Paper texture & sheet preview */
+  .paper-sheet {
+    background-color: #FAF8F5;
+    background-image: radial-gradient(#d3c9b8 0.5px, transparent 0.5px);
+    background-size: 16px 16px;
+    box-shadow: 0 15px 35px -5px rgba(23, 33, 43, 0.15), 0 5px 15px rgba(0,0,0,0.06);
+  }
+}
+
+/* Print CSS overrides */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5in;
+    size: auto;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(166, 178, 195, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(166, 178, 195, 0.5);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(8, 127, 140, 0.6);
+}
